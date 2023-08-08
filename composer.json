@@ -12,6 +12,6 @@
         "swedbank-pay/swedbank-pay-woocommerce-core": "~6.1.0"
     },
     "require-dev": {
-        "yoast/phpunit-polyfills": "^1.0.2"
+        "yoast/phpunit-polyfills": "^2.0.0"
     }
 }
