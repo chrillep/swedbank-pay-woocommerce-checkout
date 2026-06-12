@@ -17,19 +17,19 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
         with:
           path: swedbank-pay-woocommerce-checkout
 
       - name: WooCommerce Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
         with:
           repository: woocommerce/woocommerce
           ref: 5.9.0
           path: woocommerce
 
       - name: Install dependencies
-        uses: shivammathur/setup-php@master
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # master
         with:
           php-version: '7.3'
           extension: intl, mbstring, json, bcmath
@@ -40,7 +40,7 @@ jobs:
         run: sudo systemctl start mysql.service
 
       - name: Set up node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
         with:
           node-version: '12'
 
@@ -52,7 +52,7 @@ jobs:
           phpcs --standard=WordPress-Core --report=code --ignore=woocommerce,vendors,tests,docs,build,.github,assets/js/*.min.js --runtime-set ignore_warnings_on_exit true ./
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5 # v3
         with:
           path: |
             /tmp/wordpress/wp-content/uploads/wc-logs/*.log
