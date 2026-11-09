@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gulp-clean-css": "^4.3.0",
-    "gulp-sass": "^5.1.0",
+    "gulp-sass": "^6.0.0",
     "node-sass": "^7.0.1"
   },
   "devDependencies": {
